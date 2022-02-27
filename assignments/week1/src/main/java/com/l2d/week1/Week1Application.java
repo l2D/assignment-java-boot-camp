@@ -23,14 +23,14 @@ public class Week1Application {
 	@PostConstruct
 	public void initialData() {
 		// Loop 10 times to generate products
-		SecureRandom randomPrice = new SecureRandom();
+		SecureRandom randomNumber = new SecureRandom();
 		for (int i = 1; i <= 10; i++) {
 			Product product = new Product();
 			product.setName("Product " + i);
-			product.setPrice(new BigDecimal(Math.round(randomPrice.nextInt(9000))));
+			product.setPrice(new BigDecimal(randomNumber.nextInt(9000)));
 			product.setDescription("Description " + i);
 			product.setId(i);
-			product.setStock((int) Math.round(randomPrice.nextInt(9000)));
+			product.setStock(randomNumber.nextInt(1000));
 			productRepository.save(product);
 		}
 	}
