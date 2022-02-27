@@ -1,7 +1,7 @@
 ## Table of contents
 
 - Project plan: [Plan](https://github.com/l2D/assignment-java-boot-camp/projects/1)
-- Requirements:  [Wiki]([Requirements.md](https://github.com/l2D/assignment-java-boot-camp/wiki/Analyze-requirements))
+- Requirements:  [Wiki](https://github.com/l2D/assignment-java-boot-camp/wiki/Analyze-requirements)
 - Workflow: [Wiki](https://github.com/l2D/assignment-java-boot-camp/wiki/Workflow)
 - API Design: [Wiki](https://github.com/l2D/assignment-java-boot-camp/wiki/API-Routes)
 - Test cases: [Wiki](https://github.com/l2D/assignment-java-boot-camp/wiki/Test-cases)
@@ -9,6 +9,7 @@
 #### Project status: In progress 😥 (Hope not F)
 
 <hr>
+
 ## Assignments for Java Boot Camp
 * [Week 1 :: Design and Develop RESTful API with Spring Boot](https://github.com/up1/assignment-java-boot-camp/wiki/Week-01)
 
