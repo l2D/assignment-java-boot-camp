@@ -7,6 +7,22 @@
 - API Document for Postman: [File](https://github.com/l2D/assignment-java-boot-camp/blob/main/l2D%20-%20Assignment%20Week%201%20-%20Java%20Boot%20Camp.postman_collection.json)
 - Test cases: [Wiki](https://github.com/l2D/assignment-java-boot-camp/wiki/Test-cases)
 
+## For staff
+
+- You can use Makefile to run the project.
+
+#### Example:
+
+- Clean, Test, and Package: `make check`
+- Build docker image: `make build-docker`
+- Clean, Test, Package and build docker image: `make check-and-build`
+- Run docker image: `make run-image`
+- (Optional) Kill port, if port is already in use: `make kill-port` (default kill port: 8080)
+- Run all above flow: `make check-flow`
+
+For more info: [Makefile](Makefile)
+
+
 #### Project status: In progress 😥 (Hope not F)
 
 <hr>
