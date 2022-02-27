@@ -17,9 +17,6 @@ import lombok.Setter;
 @Getter @Setter @NoArgsConstructor
 public class Product {
     
-    // @Id  @Column(name = "uid", nullable = false, unique = true, updatable = false)
-    // private UUID uid = UUID.randomUUID();
-
     @Id
     private Integer id;
 

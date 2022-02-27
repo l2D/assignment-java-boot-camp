@@ -12,8 +12,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import static com.l2d.week1.product.repository.ProductRepository.*;
-
 @SpringBootApplication
 public class Week1Application {
 

@@ -17,7 +17,7 @@ public class ProductService {
 
     public void setProductRepository(ProductRepository productRepository) {
         this.productRepository = productRepository;
-    };
+    }
 
     public Optional<Product> getProductById(Integer productUid) {
 

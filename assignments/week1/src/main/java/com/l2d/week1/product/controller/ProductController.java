@@ -27,18 +27,23 @@ public class ProductController {
     public ProductResponse getProductsListOrByName(
             @RequestParam(name = "search", required = false) String productName) {
         try {
+            ProductResponse productResponse = new ProductResponse();
+            productResponse.setStatus(HttpStatus.OK.value());
+            productResponse.setMessage("Success");
+
             if (productName == null || productName.isEmpty()) {
                 List<Product> products = productService.getProducts();
-                return new ProductResponse("Success", HttpStatus.OK.value(), products);
+                productResponse.setData(products);
+                return productResponse;
             }
-            System.out.println(productName);
 
             Optional<List<Product>> products = productService.searchProduct(productName);
 
             List<Product> productsData = !products.isEmpty() ? products.get() : null;
 
             if (productsData != null && !productsData.isEmpty()) {
-                return new ProductResponse("Success", HttpStatus.OK.value(), productsData);
+                productResponse.setData(productsData);
+                return productResponse;
             } else {
                 return new ProductResponse("No products found", HttpStatus.NOT_FOUND.value(), null);
             }
