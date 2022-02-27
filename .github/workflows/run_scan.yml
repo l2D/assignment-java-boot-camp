@@ -1,0 +1,29 @@
+name: Run code scan with SonarCloud Scan
+
+on:
+  push:
+    branches:
+    - main
+    - development
+  pull_request:
+    branches:
+    - main
+    - development
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up JDK 17
+      uses: actions/setup-java@v2
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+        cache: maven
+    - name: SonarCloud Scan
+      uses: SonarSource/sonarcloud-github-action@v1.6
+      with:
+        projectBaseDir: ./assignments/week1/
