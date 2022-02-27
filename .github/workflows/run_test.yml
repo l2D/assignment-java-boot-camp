@@ -19,5 +19,7 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
         cache: maven
+    - name: Change directory
+      run: cd assignments/week1/
     - name: Testing
       run: mvn test
