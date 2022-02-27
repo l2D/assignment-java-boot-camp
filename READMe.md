@@ -4,6 +4,7 @@
 - Requirements:  [Wiki](https://github.com/l2D/assignment-java-boot-camp/wiki/Analyze-requirements)
 - Workflow: [Wiki](https://github.com/l2D/assignment-java-boot-camp/wiki/Workflow)
 - API Design: [Wiki](https://github.com/l2D/assignment-java-boot-camp/wiki/API-Routes)
+- API Document for Postman: [File](https://github.com/l2D/assignment-java-boot-camp/blob/main/l2D%20-%20Assignment%20Week%201%20-%20Java%20Boot%20Camp.postman_collection.json)
 - Test cases: [Wiki](https://github.com/l2D/assignment-java-boot-camp/wiki/Test-cases)
 
 #### Project status: In progress 😥 (Hope not F)
