@@ -1,4 +1,4 @@
-name: Build
+name: Run scan with SonarCloud Scan
 on:
   push:
     branches:
@@ -8,7 +8,7 @@ on:
     types: [opened, synchronize, reopened]
 jobs:
   build:
-    name: Build
+    name: Build & Scan
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
