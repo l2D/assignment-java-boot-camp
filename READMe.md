@@ -1,7 +1,7 @@
 ## Table of contents
 
 - Project plan: [Plan](https://github.com/l2D/assignment-java-boot-camp/projects/1)
-- Requirements:  [Wiki]([Requirements.md](https://github.com/l2D/assignment-java-boot-camp/wiki/Analyze-requirements))
+- Requirements:  [Wiki](https://github.com/l2D/assignment-java-boot-camp/wiki/Analyze-requirements)
 - Workflow: [Wiki](https://github.com/l2D/assignment-java-boot-camp/wiki/Workflow)
 - API Design: [Wiki](https://github.com/l2D/assignment-java-boot-camp/wiki/API-Routes)
 - Test cases: [Wiki](https://github.com/l2D/assignment-java-boot-camp/wiki/Test-cases)
