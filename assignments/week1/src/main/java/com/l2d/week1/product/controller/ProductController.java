@@ -29,22 +29,20 @@ public class ProductController {
         try {
             if (productName == null || productName.isEmpty()) {
                 List<Product> products = productService.getProducts();
-                // return ProductResponse.generateResponse("Success", HttpStatus.OK, products);
                 return new ProductResponse("Success", HttpStatus.OK.value(), products);
             }
             System.out.println(productName);
 
             Optional<List<Product>> products = productService.searchProduct(productName);
 
-            if (!products.get().isEmpty()) {
-                // return ProductResponse.generateResponse("Success", HttpStatus.OK, products.get());
-                return new ProductResponse("Success", HttpStatus.OK.value(), products.get());
+            List<Product> productsData = !products.isEmpty() ? products.get() : null;
+
+            if (productsData != null && !productsData.isEmpty()) {
+                return new ProductResponse("Success", HttpStatus.OK.value(), productsData);
             } else {
-                // return ProductResponse.generateResponse("No products found", HttpStatus.NOT_FOUND, null);
                 return new ProductResponse("No products found", HttpStatus.NOT_FOUND.value(), null);
             }
         } catch (Exception e) {
-            // return ProductResponse.generateResponse("Error", HttpStatus.INTERNAL_SERVER_ERROR, null);
             return new ProductResponse("Error", HttpStatus.INTERNAL_SERVER_ERROR.value(), null);
         }
     }
@@ -54,14 +52,11 @@ public class ProductController {
         try {
             Optional<Product> product = productService.getProductById(productId);
             if (product.isPresent()) {
-                // return ProductResponse.generateResponse("Success", HttpStatus.OK, product.get());
                 return new ProductResponse("Success", HttpStatus.OK.value(), product.get());
             } else {
-                // return ProductResponse.generateResponse("No product found", HttpStatus.NOT_FOUND, null);
                 return new ProductResponse("No product found", HttpStatus.NOT_FOUND.value(), null);
             }
         } catch (Exception e) {
-            // return ProductResponse.generateResponse("Error", HttpStatus.INTERNAL_SERVER_ERROR, null);
             return new ProductResponse("Error", HttpStatus.INTERNAL_SERVER_ERROR.value(), null);
         }
     }
