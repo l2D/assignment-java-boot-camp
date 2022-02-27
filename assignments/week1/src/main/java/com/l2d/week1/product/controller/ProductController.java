@@ -35,17 +35,13 @@ public class ProductController {
 
             Optional<List<Product>> products = productService.searchProduct(productName);
 
-            Boolean isEmpty = products.get().isEmpty();
+            List<Product> productsData = !products.isEmpty() ? products.get() : null;
 
-            if (isEmpty) {
+            if (productsData != null && !productsData.isEmpty()) {
+                return new ProductResponse("Success", HttpStatus.OK.value(), productsData);
+            } else {
                 return new ProductResponse("No products found", HttpStatus.NOT_FOUND.value(), null);
             }
-
-            return new ProductResponse("Success", HttpStatus.OK.value(), products.get());
-            // if (isEmpty) {
-            // } else {
-            //     return new ProductResponse("No products found", HttpStatus.NOT_FOUND.value(), null);
-            // }
         } catch (Exception e) {
             return new ProductResponse("Error", HttpStatus.INTERNAL_SERVER_ERROR.value(), null);
         }
