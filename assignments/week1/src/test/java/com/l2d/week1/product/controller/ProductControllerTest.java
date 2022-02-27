@@ -11,6 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.when;
 
 import java.math.BigDecimal;
+import java.security.SecureRandom;
 import java.util.List;
 import java.util.Optional;
 
@@ -29,6 +30,8 @@ class ProductControllerTest {
     @MockBean
     private ProductRepository productRepository;
 
+    private SecureRandom randomNumber = new SecureRandom();
+
     @Test
     @DisplayName("""
             Should return product list
@@ -36,10 +39,10 @@ class ProductControllerTest {
     void getProductsListOrByName() {
         Product product = new Product();
         product.setName("Product 1");
-        product.setPrice(new BigDecimal(Math.round(Math.random() * 9000 + 100)));
+        product.setPrice(new BigDecimal(randomNumber.nextInt(9000)));
         product.setDescription("Description 1");
         product.setId(1);
-        product.setStock((int) Math.round(Math.random() * 100));
+        product.setStock(randomNumber.nextInt(1000));
 
         when(productRepository.findByNameContainingIgnoreCase("Product 1")).thenReturn(Optional.of(List.of(product)));
 
@@ -63,10 +66,10 @@ class ProductControllerTest {
         // Arrange
         Product product = new Product();
         product.setName("Product 1");
-        product.setPrice(new BigDecimal(Math.round(Math.random() * 9000 + 100)));
+        product.setPrice(new BigDecimal(randomNumber.nextInt(9000)));
         product.setDescription("Description 1");
         product.setId(1);
-        product.setStock((int) Math.round(Math.random() * 100));
+        product.setStock(randomNumber.nextInt(1000));
 
         when(productRepository.findById(1)).thenReturn(Optional.of(product));
 
