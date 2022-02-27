@@ -1,0 +1,322 @@
+{
+	"info": {
+		"_postman_id": "11c1e340-29a3-457c-9e24-1503dbc73e16",
+		"name": "l2D - Assignment Week 1 - Java Boot Camp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "Get product list or search by name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{devUrl}}/products?search=Product 1",
+							"host": [
+								"{{devUrl}}"
+							],
+							"path": [
+								"products"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "Product 1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success with search query",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/products?search=Product 1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"products"
+									],
+									"query": [
+										{
+											"key": "search",
+											"value": "Product 1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Feb 2022 19:35:38 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Success\",\n    \"status\": 200,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"merchantUid\": null,\n            \"name\": \"Product 1\",\n            \"description\": \"Description 1\",\n            \"price\": 8176.81,\n            \"stock\": 49\n        },\n        {\n            \"id\": 10,\n            \"merchantUid\": null,\n            \"name\": \"Product 10\",\n            \"description\": \"Description 10\",\n            \"price\": 8888.08,\n            \"stock\": 54\n        }\n    ]\n}"
+						},
+						{
+							"name": "Success without search query",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{devUrl}}/products",
+									"host": [
+										"{{devUrl}}"
+									],
+									"path": [
+										"products"
+									],
+									"query": [
+										{
+											"key": "search",
+											"value": "Product 1",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Feb 2022 19:37:35 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Success\",\n    \"status\": 200,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"merchantUid\": null,\n            \"name\": \"Product 1\",\n            \"description\": \"Description 1\",\n            \"price\": 8176.81,\n            \"stock\": 49\n        },\n        {\n            \"id\": 2,\n            \"merchantUid\": null,\n            \"name\": \"Product 2\",\n            \"description\": \"Description 2\",\n            \"price\": 8958.38,\n            \"stock\": 90\n        },\n        {\n            \"id\": 3,\n            \"merchantUid\": null,\n            \"name\": \"Product 3\",\n            \"description\": \"Description 3\",\n            \"price\": 4188.42,\n            \"stock\": 89\n        },\n        {\n            \"id\": 4,\n            \"merchantUid\": null,\n            \"name\": \"Product 4\",\n            \"description\": \"Description 4\",\n            \"price\": 2609.51,\n            \"stock\": 38\n        },\n        {\n            \"id\": 5,\n            \"merchantUid\": null,\n            \"name\": \"Product 5\",\n            \"description\": \"Description 5\",\n            \"price\": 8928.79,\n            \"stock\": 12\n        },\n        {\n            \"id\": 6,\n            \"merchantUid\": null,\n            \"name\": \"Product 6\",\n            \"description\": \"Description 6\",\n            \"price\": 8735.58,\n            \"stock\": 40\n        },\n        {\n            \"id\": 7,\n            \"merchantUid\": null,\n            \"name\": \"Product 7\",\n            \"description\": \"Description 7\",\n            \"price\": 4788.2,\n            \"stock\": 48\n        },\n        {\n            \"id\": 8,\n            \"merchantUid\": null,\n            \"name\": \"Product 8\",\n            \"description\": \"Description 8\",\n            \"price\": 783.72,\n            \"stock\": 32\n        },\n        {\n            \"id\": 9,\n            \"merchantUid\": null,\n            \"name\": \"Product 9\",\n            \"description\": \"Description 9\",\n            \"price\": 4323.64,\n            \"stock\": 16\n        },\n        {\n            \"id\": 10,\n            \"merchantUid\": null,\n            \"name\": \"Product 10\",\n            \"description\": \"Description 10\",\n            \"price\": 8888.08,\n            \"stock\": 54\n        }\n    ]\n}"
+						},
+						{
+							"name": "Failure with search query",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{devUrl}}/products?search=AS",
+									"host": [
+										"{{devUrl}}"
+									],
+									"path": [
+										"products"
+									],
+									"query": [
+										{
+											"key": "search",
+											"value": "AS"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Feb 2022 19:37:58 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"No products found\",\n    \"status\": 404,\n    \"data\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Get product by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{devUrl}}/products/1",
+							"host": [
+								"{{devUrl}}"
+							],
+							"path": [
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success: Found product with this id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{devUrl}}/products/1",
+									"host": [
+										"{{devUrl}}"
+									],
+									"path": [
+										"products",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Feb 2022 19:38:23 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Success\",\n    \"status\": 200,\n    \"data\": {\n        \"id\": 1,\n        \"merchantUid\": null,\n        \"name\": \"Product 1\",\n        \"description\": \"Description 1\",\n        \"price\": 8176.81,\n        \"stock\": 49\n    }\n}"
+						},
+						{
+							"name": "Failure: Not found product with this id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{devUrl}}/products/100",
+									"host": [
+										"{{devUrl}}"
+									],
+									"path": [
+										"products",
+										"100"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Feb 2022 19:38:34 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"No product found\",\n    \"status\": 404,\n    \"data\": null\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "devUrl",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}
